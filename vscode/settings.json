@@ -1,0 +1,17 @@
+{
+    "python.pythonPath": "/usr/local/bin/python",
+    "workbench.colorTheme": "Horizon Bold",
+    "workbench.iconTheme": "city-lights-icons-vsc-light",
+    "editor.fontFamily": "Fira Code",
+    "editor.fontSize": 14,
+    "tabnine.experimentalAutoImports": true,
+    "editor.dragAndDrop": false,
+    "workbench.preferredDarkColorTheme": "Horizon Bold",
+    "workbench.preferredLightColorTheme": "1984 - Light",
+    "window.autoDetectColorScheme": true,
+    "gitlens.codeLens.enabled": false,
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.currentLine.enabled": false,
+    "git.enableSmartCommit": true,
+    "git.autofetch": true
+}

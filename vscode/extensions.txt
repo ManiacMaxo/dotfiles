@@ -1,0 +1,10 @@
+1984
+Horizon Theme
+City Lights icon package
+
+Bracket Pair Colorizer 2
+Highlight Matching Tag
+
+GitLens
+Prettier
+TabNine
