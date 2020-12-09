@@ -12,8 +12,7 @@ alias jn "jupyter notebook"
 
 ##time-saving
 alias server "ssh gorchilov.net"
-#alias boo "brew update && brew upgrade && brew upgrade --cask && brew cleanup && brew doctor"
-alias xa "exa -la"
+xalias xa "exa -la"
 
 export PATH="/usr/local/sbin:$PATH"
 
@@ -22,8 +21,11 @@ alias gcm "git commit -m"
 alias gmain "git checkout main"
 alias gmas "git checkout master"
 
-function nvm
-   bass source ~/.nvm/nvm.sh --no-use ';' nvm $argv
+if test (uname) = Darwin
+    alias boo "brew update && brew upgrade && brew upgrade --cask && brew cleanup && brew doctor"
+else if test (uname) = Linux and test (omf list | grep bass)
+    function nvm
+        bass source ~/.nvm/nvm.sh --no-use ';' nvm $argv
+    end
+    nvm use default --silent
 end
-
-nvm use default --silent
