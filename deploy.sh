@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 git pull
-rsync -a --exclude={'.git', 'README.md', 'deploy.sh'} . ~/
+rsync -a root/ ~/ 
