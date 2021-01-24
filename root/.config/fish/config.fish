@@ -23,9 +23,12 @@ alias gmas "git checkout master"
 
 if test (uname) = Darwin
     alias boo "brew update && brew upgrade && brew upgrade --cask && brew cleanup && brew doctor"
-else if test (uname) = Linux; and test (omf list | grep bass)
-    function nvm
-        bass source ~/.nvm/nvm.sh --no-use ';' nvm $argv
-    end
-    nvm use default --silent
+else if test (uname) = Linux;
+	if test (omf list | grep bass)
+    	function nvm
+        	bass source ~/.nvm/nvm.sh --no-use ';' nvm $argv
+    	end
+    	nvm use default --silent
+	end
+	alias boo "sudo apt update -y && sudo apt upgrade -y && sudo apt autoremove && sudo apt autoclean"
 end
