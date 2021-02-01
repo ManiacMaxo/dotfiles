@@ -18,7 +18,9 @@ end
 export PATH="/usr/local/sbin:$PATH"
 
 # git aliases
-alias gcm "git commit -m"
+function gcm
+    git commit -m \"(string join ' ' $argv)\"
+end
 alias gmain "git checkout main"
 alias gmas "git checkout master"
 

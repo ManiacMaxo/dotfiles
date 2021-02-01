@@ -3,3 +3,5 @@ name = Victor Gorchilov
 email = victor@gorchilov.com
 [alias]
     last = log -1 HEAD
+[pull]
+	rebase = false

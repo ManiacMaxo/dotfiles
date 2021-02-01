@@ -48,8 +48,6 @@ brew "node"
 brew "pipenv"
 # Python package management tool
 brew "poetry"
-# Python version management
-brew "pyenv"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.8"
 # Display and control your Android device
@@ -70,23 +68,17 @@ brew "wget"
 brew "youtube-dl"
 # Ookla Speedtest
 brew "teamookla/speedtest/speedtest"
-# GPU-accelerated terminal emulator
-cask "alacritty"
 # Application launcher and productivity software
 cask "alfred"
 cask "apptrap"
 # Web browser focusing on privacy
 cask "brave-browser"
-# Jailbreak for iPhone 5s through iPhone X, iOS 12.0 and up
-cask "checkra1n"
 # Tool to show live information about the batteries in various devices
 cask "coconutbattery"
 # Voice and text chat software
 cask "discord"
 # App to build and share containerized applications and microservices
 cask "docker"
-# Tool to hide status bar icons
-cask "dozer"
 # Client for the Dropbox cloud storage service
 cask "dropbox"
 cask "figma"
@@ -97,8 +89,6 @@ cask "github"
 cask "google-chrome"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
-# Collaboration platform for API development
-cask "postman"
 # Tool to reverse the direction of scrolling
 cask "scroll-reverser"
 cask "spark"
@@ -106,13 +96,9 @@ cask "spark"
 cask "spectacle"
 # Music streaming service
 cask "spotify"
-# Remote access and connectivity software focused on security
-cask "teamviewer"
 # Open-source BitTorrent client
 cask "transmission"
 # Calling and messaging application focusing on security
 cask "viber"
 # Open-source code editor
 cask "visual-studio-code"
-# Open-source version of the X.Org X Window System
-cask "xquartz"
