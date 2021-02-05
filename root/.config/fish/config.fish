@@ -1,12 +1,10 @@
 set fish_greeting
-set -x LANG "en_US.UTF-8"
-set -x LC_ALL "en_US.UTF-8"
 
 # fun
 alias starwars "nc towel.blinkenlights.nl 23"
 
 # workflow
-
+alias ssh-keygen "ssh-keygen -t ed25519 -a 100"
 alias gcce "gcc -Wall -pedantic -std=c11"
 alias pip-update "pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip3 install -U"
 alias jn "jupyter notebook"
