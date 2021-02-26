@@ -14,7 +14,7 @@ function cra
     npx create-react-app $argv --template typescript-scss
 end
 
-export PATH="/usr/local/sbin:$PATH"
+set PATH /usr/local/sbin $HOME/.local/bin $HOME/.cargo/bin $PATH
 
 # git aliases
 function gcm
