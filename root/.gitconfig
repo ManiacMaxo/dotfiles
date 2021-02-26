@@ -3,5 +3,6 @@ name = Victor Gorchilov
 email = victor@gorchilov.com
 [alias]
     last = log -1 HEAD
+    change-date = commit --amend --no-edit --date
 [pull]
 	rebase = false
