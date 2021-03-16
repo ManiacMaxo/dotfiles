@@ -2,7 +2,7 @@
 
 case $1 in
     server)
-        rsync -a --exclude 'root/.config/' root/ ~/
+        rsync -a --exclude '.config/' root/ ~/
         ;;
     fish)
         rsync -a --exclude '.bash*' root/ ~/
