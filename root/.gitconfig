@@ -6,3 +6,5 @@ email = victor@gorchilov.com
     change-date = commit --amend --no-edit --date
 [pull]
 	rebase = false
+[core]
+    editor = vim
