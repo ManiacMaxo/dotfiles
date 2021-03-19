@@ -19,7 +19,7 @@ DISABLE_UPDATE_PROMPT="true"
 
 HIST_STAMPS="dd.mm.yyyy"
 
-plugins=(git nvm sudo yarn)
+plugins=(git nvm sudo yarn functions)
 
 source $ZSH/oh-my-zsh.sh
 

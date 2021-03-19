@@ -7,14 +7,6 @@ alias server="ssh gorchilov.net"
 alias pip-update="pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip3 install -U"
 alias gcce="gcc -Wall -pedantic -std=c11"
 
-gcm () {
-    git commit -m "${(j. .)${:-$argv}}"
-}
-
-cra () {
-    npx create-react-app $argv --template typescript-scss
-}
-
 if [[ uname == Darwin ]] then
     alias boo="brew update && brew upgrade && brew upgrade --cask && brew cleanup && brew doctor"
 else if [[uname ==  Linux]] then
