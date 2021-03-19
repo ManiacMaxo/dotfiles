@@ -1,3 +1,4 @@
 # How to use this repository
 
-`./install`
+-   Run `./install.sh`
+-   All done!

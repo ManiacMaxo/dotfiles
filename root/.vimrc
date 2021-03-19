@@ -13,6 +13,3 @@ Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
 
-"colorscheme horizon
-"set termguicolors
-"let g:lightline = {'colorscheme' : 'horizon'}
