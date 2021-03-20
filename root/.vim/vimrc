@@ -12,4 +12,3 @@ Plug 'ntk148v/vim-horizon'
 Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
-

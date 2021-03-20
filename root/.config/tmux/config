@@ -2,10 +2,10 @@
 bind-key r source-file ~/.tmux.conf \ display-message "~/.tmux.conf reloaded"
 
 # split windows
-bind h split-window -h
-bind v split-window -v
 unbind '"'
 unbind %
+bind | split-window -h -c '#{pane_current_path}'
+bind - split-window -v -c '#{pane_current_path}'
 
 # kill window/pane without confirmation
 bind-key & kill-window
@@ -13,3 +13,9 @@ bind-key x kill-pane
 
 # enable mouse scroll
 setw -g mouse on
+
+unbind l
+bind h select-pane -L
+bind l select-pane -R
+bind j select-pane -U
+bind k select-pane -D
