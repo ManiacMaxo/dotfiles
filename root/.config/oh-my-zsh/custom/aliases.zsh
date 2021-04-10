@@ -10,6 +10,7 @@ alias gcce="gcc -Wall -pedantic -std=c11"
 alias ipe="curl ifconfig.me/ip"
 alias nginxreload="sudo nginx -s reload"
 alias nginxtest="sudo nginx -t"
+alias nmapa="nmap -A -T4 -p-"
 
 function gcm {
     git commit -m "${(j. .)${:-$argv}}"
