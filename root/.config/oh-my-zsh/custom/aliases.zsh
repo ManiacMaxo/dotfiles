@@ -11,6 +11,7 @@ alias ipe="curl ifconfig.me/ip"
 alias nginxreload="sudo nginx -s reload"
 alias nginxtest="sudo nginx -t"
 alias nmapa="nmap -A -T4 -p-"
+alias pstime="ps -o etime= -p"
 
 function gcm {
     git commit -m "${(j. .)${:-$argv}}"
