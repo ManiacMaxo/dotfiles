@@ -13,9 +13,7 @@ alias nginxtest="sudo nginx -t"
 alias nmapa="nmap -A -T4 -p-"
 alias pstime="ps -o etime= -p"
 
-function gcm {
-    git commit -m "${(j. .)${:-$argv}}"
-}
+alias gcm="git commit -m"
 
 function cra {
     npx create-react-app $argv --template typescript-scss
