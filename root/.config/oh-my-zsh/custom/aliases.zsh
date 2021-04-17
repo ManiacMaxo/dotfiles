@@ -8,8 +8,8 @@ alias pip-update="pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d
 alias gcce="gcc -Wall -pedantic -std=c11"
 
 alias ipe="curl ifconfig.me/ip"
-alias nginxreload="sudo nginx -s reload"
-alias nginxtest="sudo nginx -t"
+alias nginxr="sudo nginx -s reload"
+alias nginxt="sudo nginx -t"
 alias nmapa="nmap -A -T4 -p-"
 alias pstime="ps -o etime= -p"
 alias docker-ps="docker ps -a --format='table {{.Names}}\\t{{.ID}}\\t{{.Status}}\\t{{.Ports}}'"
