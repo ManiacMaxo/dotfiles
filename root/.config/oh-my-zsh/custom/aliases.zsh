@@ -12,6 +12,7 @@ alias nginxreload="sudo nginx -s reload"
 alias nginxtest="sudo nginx -t"
 alias nmapa="nmap -A -T4 -p-"
 alias pstime="ps -o etime= -p"
+alias docker-ps="docker ps -a --format='table {{.Names}}\\t{{.ID}}\\t{{.Status}}\\t{{.Ports}}'"
 
 alias gcm="git commit -m"
 
