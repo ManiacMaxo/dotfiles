@@ -13,5 +13,6 @@ HIST_STAMPS="dd.mm.yyyy"
 plugins=(git nvm sudo yarn zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
+autoload -Uz compinit; compinit
 
 export PATH="$HOME/miniconda3/bin:$(yarn global bin):$PATH"
