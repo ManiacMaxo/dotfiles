@@ -91,24 +91,24 @@ colors:
         text: CellForeground
         background: '0x2A2738'
     normal:
-        black:   '0x6e6a86'
-        red:     '0xeb6f92'
-        green:   '0x9ccfd8'
-        yellow:  '0xf6c177'
-        blue:    '0x31748f'
+        black: '0x6e6a86'
+        red: '0xeb6f92'
+        green: '0x9ccfd8'
+        yellow: '0xf6c177'
+        blue: '0x31748f'
         magenta: '0xc4a7e7'
-        cyan:    '0xebbcba'
-        white:   '0xe0def4'
+        cyan: '0xebbcba'
+        white: '0xe0def4'
     bright:
-        black:   '0x6e6a86'
-        red:     '0xeb6f92'
-        green:   '0x9ccfd8'
-        yellow:  '0xf6c177'
-        blue:    '0x31748f'
+        black: '0x6e6a86'
+        red: '0xeb6f92'
+        green: '0x9ccfd8'
+        yellow: '0xf6c177'
+        blue: '0x31748f'
         magenta: '0xc4a7e7'
-        cyan:    '0xebbcba'
-        white:   '0xe0def4'
-  # Indexed Colors
+        cyan: '0xebbcba'
+        white: '0xe0def4'
+    # Indexed Colors
     #
     # The indexed colors include all colors from 16 to 256.
     # When these are not set, they're filled with sensible defaults.
@@ -247,7 +247,7 @@ cursor:
     # window is not focused.
     unfocused_hollow: true
 
-# dynamic_title: false
+dynamic_title: true
 
 # Live config reload (changes require restart)
 live_config_reload: true
