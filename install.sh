@@ -3,6 +3,7 @@
 if [[ $(uname) == "Darwin" ]]; then
     echo "Mac OS X detected"
     CONDA_INSTALLER="Miniconda3-latest-MacOSX-arm64.sh"
+    # homebrew
     wget -qO- https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash
 else
     sudo apt install vim openssh-server zsh -y
@@ -24,6 +25,6 @@ wget -qO- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
 nvm install --lts
 # conda
-wget -qO- https://repo.anaconda.com/miniconda/$CONDA_INSTALLER | sh
+# wget -qO- https://repo.anaconda.com/miniconda/$CONDA_INSTALLER | sh
 
-bash update.sh
+./update.sh
