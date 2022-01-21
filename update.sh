@@ -1,3 +1,3 @@
 #!/bin/bash
 
-rsync -a root/ ~/
+rsync -a  $(dirname $(realpath $0))/root/ ~/

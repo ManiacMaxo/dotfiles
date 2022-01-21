@@ -23,4 +23,4 @@ if type brew &>/dev/null; then
   FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 fi
 
-export PATH="$(yarn global bin):$PATH"
+export PATH="$(yarn global bin):$HOME/.poetry/bin:$PATH"
