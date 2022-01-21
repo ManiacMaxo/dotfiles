@@ -13,7 +13,7 @@ HIST_STAMPS="dd.mm.yyyy"
 plugins=(git nvm yarn rust zsh-syntax-highlighting)
 
 if [[ $(uname) == "Darwin" ]];then
-  export PATH="/opt/homebrew/bin:/opt/homebrew/opt/gnu-tar/libexec/gnubin:$PATH"
+  export PATH="/opt/homebrew/bin:/opt/homebrew/opt/gnu-tar/libexec/gnubin:$HOME/.poetry/bin:$PATH"
 fi
 
 source $ZSH/oh-my-zsh.sh
@@ -23,4 +23,4 @@ if type brew &>/dev/null; then
   FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 fi
 
-export PATH="$(yarn global bin):$HOME/.poetry/bin:$PATH"
+export PATH="$(yarn global bin):$HOME/.local/bin:$PATH"
