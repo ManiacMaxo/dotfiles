@@ -1,4 +1,5 @@
 set -gx LANG en_US.UTF-8
+set fish_greeting
 
 fish_add_path \
     /usr/local/sbin \
