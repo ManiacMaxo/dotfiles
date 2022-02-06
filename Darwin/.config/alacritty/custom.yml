@@ -1,0 +1,4 @@
+window:
+    decorations: 'transparent'
+    padding:
+        y: 25

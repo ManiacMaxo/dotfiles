@@ -10,7 +10,7 @@ set VIRTUAL_ENV_DISABLE_PROMPT 1
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
-    nvm use default > /dev/null
+    nvm use default >/dev/null
     fish_add_path (yarn global bin)
 end
 
@@ -33,10 +33,10 @@ if [ (uname) = Darwin ]
     fish_add_path /opt/homebrew/bin /opt/homebrew/sbin
     fish_add_path $HOME/Library/Python/3.*/bin
     alias boo "brew update && brew upgrade && brew upgrade --cask && brew cleanup && brew doctor"
-else
+else if [ (uname) = Linux ]
     alias boo "sudo apt update -y && sudo apt upgrade -y && sudo apt autoremove"
 end
 
-if [ (which starship) ] 
+if [ (which starship) ]
     starship init fish | source
 end
