@@ -11,7 +11,7 @@ set VIRTUAL_ENV_DISABLE_PROMPT 1
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
-    nvm use default >/dev/null
+    nvm use default > /dev/null
     fish_add_path (yarn global bin)
 end
 

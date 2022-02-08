@@ -1,4 +1,4 @@
 #!/bin/bash
 
-DIR=$(dirname $0)
-rsync -a --exclude-from=$DIR/.gitignore $DIR/{root,$(uname)}/ ~/
+DIR=$(dirname $(realpath $0))
+rsync -a --exclude-from=$DIR/.gitignore $DIR/{root,$(uname)}/ ~/ 2>/dev/null
