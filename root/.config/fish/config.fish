@@ -1,17 +1,20 @@
 set -gx LANG en_US.UTF-8
 set fish_greeting
 
+set GOPATH $HOME/.go
+
 fish_add_path \
     /usr/local/sbin \
     $HOME/.cargo/bin \
-    $HOME/.local/bin
+    $HOME/.local/bin \
+    $GOPATH/bin
 
 set NVM_DIR $HOME/.nvm
 set VIRTUAL_ENV_DISABLE_PROMPT 1
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
-    nvm use default > /dev/null
+    nvm use default >/dev/null
     fish_add_path (yarn global bin)
 end
 
