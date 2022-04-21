@@ -7,6 +7,8 @@ fish_add_path \
     /usr/local/sbin \
     $HOME/.cargo/bin \
     $HOME/.local/bin \
+    $HOME/.poetry/bin \
+    $HOME/.miniconda3/bin \
     $GOPATH/bin
 
 set NVM_DIR $HOME/.nvm
@@ -29,7 +31,6 @@ alias gcce "gcc -Wall -pedantic -std=c11"
 alias ipe "curl ifconfig.me/ip"
 alias nmapa "nmap -A -T4 -p-"
 alias pstime "ps -o etime= -p"
-alias docker-ps "docker ps -a --format='table {{.Names}}\\t{{.ID}}\\t{{.Status}}\\t{{.Ports}}'"
 
 alias gcm "git commit -m"
 
@@ -43,4 +44,8 @@ end
 
 if [ (which starship) ]
     starship init fish | source
+end
+
+if [ (ls $HOME/.miniconda3/ &>/dev/null) ]
+    eval /Users/victor/.miniconda3/bin/conda "shell.fish" hook $argv | source
 end
