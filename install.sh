@@ -1,13 +1,32 @@
 #!/bin/bash
 
+set -e
+
+function install {
+    if [[ $(uname) == "Darwin" ]]; then
+        brew install ${@}
+    else
+        if command -v apt &>/dev/null; then
+            sudo apt install ${@} -y
+        elif command -v dnf &>/dev/null; then
+            sudo dnf install ${@} -y
+        elif command -v pacman &>/dev/null; then
+            sudo pacman -Sy ${@}
+        elif command -v yay &>/dev/null; then
+            sudo yay -Sy ${@}
+        else
+            echo "Unsupported package manager"
+            exit 1
+        fi
+    fi
+}
+
 if [[ $(uname) == "Darwin" ]]; then
-    echo "Mac OS X detected"
-    CONDA_INSTALLER="Miniconda3-latest-MacOSX-arm64.sh"
     # homebrew
-    curl -fsSL -so- https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    brew install openssl
 else
-    sudo apt install vim openssh-server zsh -y
-    CONDA_INSTALLER="Miniconda3-latest-Linux-x86_64.sh"
+    install curl git openssh vim
 fi
 
 if [ ! -f ~/.ssh/id_ed25519 ]; then
@@ -21,22 +40,41 @@ shell=$(echo $shell | tr '[:upper:]' '[:lower:]')
 if [[ shell == 'zsh' ]]; then
     # oh-my-zsh
     ZSH="$HOME/.config/oh-my-zsh"
-    curl -so- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 elif [[ shell == 'fish' ]]; then
     # fisher plugin manager
+    install fish
     curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
     fish
+else
+    echo "Invalid shell"
+    exit 1
+fi
 
-    curl -fsSL https://starship.rs/install.sh | sh
+# starship prompt
+if [[ $(uname) == "Darwin" ]]; then
+    brew install starship
+else
+
+    if command -v pacman &>/dev/null; then
+        sudo pacman -Sy starship
+    elif command -v nix-env &>/dev/null; then
+        sudo nix-env -iA nixpkgs.starship
+    elif command -v dnf &>/dev/null; then
+        sudo dnf copr enable atim/starship && sudo dnf install starship
+    else
+        curl -sS https://starship.rs/install.sh | sh
+    fi
+
 fi
 
 # rust toolchain
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ~/.cargo/bin/cargo install exa
+
 # nvm
-curl -so- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
+export NVM_DIR=$HOME/.nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
 nvm install --lts
-# conda
-curl -so- https://repo.anaconda.com/miniconda/$CONDA_INSTALLER | sh - -b
 
 ./update.sh

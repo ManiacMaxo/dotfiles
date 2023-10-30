@@ -7,8 +7,6 @@ fish_add_path \
     /usr/local/sbin \
     $HOME/.cargo/bin \
     $HOME/.local/bin \
-    $HOME/.poetry/bin \
-    $HOME/.miniconda3/bin \
     $GOPATH/bin
 
 set NVM_DIR $HOME/.nvm
@@ -36,7 +34,6 @@ alias gcm "git commit -m"
 
 if [ (uname) = Darwin ]
     fish_add_path /opt/homebrew/bin /opt/homebrew/sbin
-    fish_add_path $HOME/Library/Python/3.*/bin
     alias boo "brew update && brew upgrade && brew upgrade --cask && brew cleanup && brew doctor"
 else if [ (uname) = Linux ]
     alias boo "sudo apt update -y && sudo apt upgrade -y && sudo apt autoremove"

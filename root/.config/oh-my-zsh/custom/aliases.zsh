@@ -12,10 +12,6 @@ alias pstime="ps -o etime= -p"
 
 alias gcm="git commit -m"
 
-function cra {
-    npx create-react-app $argv --template typescript-scss
-}
-
 if [[ $(uname) == "Darwin" ]]; then
     alias boo="brew update && brew upgrade && brew upgrade --cask && brew cleanup && brew doctor"
 elif type type &>/dev/null; then
